@@ -84,8 +84,6 @@
                 <artifactId>maven-clover2-plugin</artifactId>
                 <version>4.0.6</version>
                 <configuration>
-                    <generateJSON>true</generateJSON>
-                    <generateHTML>true</generateHTML>
                     <includesTestSourceRoots>true</includesTestSourceRoots>
                     <includesAllSourceRoots>true</includesAllSourceRoots>
                     <jdk>1.8</jdk>
