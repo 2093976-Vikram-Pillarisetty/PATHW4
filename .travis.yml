@@ -8,5 +8,4 @@ jdk:
 sudo: false
 
 script:
-  - mvn test
-  - mvn evosuite:info
+  - mvn test evosuite:info
