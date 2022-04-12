@@ -1,7 +1,6 @@
 language: java
 
-os:
-  - osx
+dist: trusty
 
 jdk:
   - oraclejdk8
