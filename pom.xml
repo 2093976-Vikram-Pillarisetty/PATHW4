@@ -81,16 +81,39 @@
 
             <plugin>
                 <groupId>com.atlassian.maven.plugins</groupId>
-                <artifactId>clover-maven-plugin</artifactId>
-                <version>4.1.2</version>
+                <artifactId>maven-clover2-plugin</artifactId>
+                <version>4.0.6</version>
                 <configuration>
+                    <generateJSON>true</generateJSON>
+                    <generateHTML>true</generateHTML>
+                    <includesTestSourceRoots>true</includesTestSourceRoots>
+                    <includesAllSourceRoots>true</includesAllSourceRoots>
+                    <jdk>1.8</jdk>
                     <excludes>
                         <exclude>**/*_ESTest.java</exclude>
                         <exclude>**/*_ESTest_scaffolding.java</exclude>
                     </excludes>
-                    <generateJSON>true</generateJSON>
-                    <generateHTML>true</generateHTML>
                 </configuration>
+
+                <executions>
+                    <execution>
+                        <id>main</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>instrument</goal>
+                            <goal>check</goal>
+                            <goal>log</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>site</id>
+                        <phase>pre-site</phase>
+                        <goals>
+                            <goal>instrument</goal>
+                            <goal>clover</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
 
         </plugins>
