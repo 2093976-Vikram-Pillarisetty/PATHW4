@@ -10,15 +10,6 @@
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.evosuite.plugins</groupId>
-                <artifactId>evosuite-maven-plugin</artifactId>
-                <version>1.0.6</version>
-                <executions><execution>
-                    <goals> <goal> prepare </goal> </goals>
-                    <phase> process-test-classes </phase>
-                </execution></executions>
-            </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -33,6 +24,16 @@
                     </properties>
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.evosuite.plugins</groupId>
+                <artifactId>evosuite-maven-plugin</artifactId>
+                <version>1.0.6</version>
+                <executions><execution>
+                    <goals> <goal> prepare </goal> </goals>
+                    <phase> process-test-classes </phase>
+                </execution></executions>
             </plugin>
 
             <plugin>
