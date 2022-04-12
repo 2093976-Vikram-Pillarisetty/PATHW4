@@ -8,4 +8,4 @@ jdk:
 sudo: false
 
 script:
-  - mvn package evosuite:generate evosuite:export  test evosuite:info
+  - mvn evosuite:generate evosuite:export test evosuite:info
