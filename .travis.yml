@@ -13,6 +13,6 @@ script:
   - mvn evosuite:export
   - mvn test
   - mvn evosuite:info
-  - "mvn cobertura:cobertura"
+
 after_success:
   - bash <(curl -s https://codecov.io/bash)
