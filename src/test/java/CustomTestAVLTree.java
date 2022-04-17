@@ -4,7 +4,7 @@ import static org.junit.Assert.fail;
 public class CustomTestAVLTree {
 
   @Test
-  public void test01()  throws Throwable  {
+  public void test1()  throws Throwable  {
     try {
       AVLTree aVLTree0 = new AVLTree();
       aVLTree0.insert(0);
