@@ -6,19 +6,6 @@ public class CustomTestAVLTree {
   @Test(timeout = 4000)
   public void test1() throws Throwable {
     AVLTree aVLTree0 = new AVLTree();
-    AVLTree.Node node2 = aVLTree0.find(6);
-    aVLTree0.insert(20);
-    aVLTree0.insert(0);
-    try {
-      aVLTree0.delete(20);
-    }catch(NullPointerException ignored){
-      fail("Expecting null pointer exception");
-    }
-  }
-  
-  @Test(timeout = 4000)
-  public void test2() throws Throwable {
-    AVLTree aVLTree0 = new AVLTree();
     try {
       aVLTree0.insert((-3268));
       aVLTree0.insert(1781);
@@ -42,7 +29,7 @@ public class CustomTestAVLTree {
   }
 
   @Test(timeout = 4000)
-  public void test3() throws Throwable {
+  public void test2() throws Throwable {
     AVLTree aVLTree0 = new AVLTree();
     aVLTree0.insert(11);
     aVLTree0.insert(52);
