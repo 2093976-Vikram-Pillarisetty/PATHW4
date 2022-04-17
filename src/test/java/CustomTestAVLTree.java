@@ -6,6 +6,23 @@ public class CustomTestAVLTree {
   @Test(timeout = 4000)
   public void test1() throws Throwable {
     AVLTree aVLTree0 = new AVLTree();
+    AVLTree.Node node2 = aVLTree0.find(6);
+    AVLTree.Node node3 = aVLTree0.getRoot();
+    aVLTree0.delete(110);
+    aVLTree0.insert(20);
+    AVLTree.Node node8 = aVLTree0.getRoot();
+    aVLTree0.insert(0);
+    try {
+      aVLTree0.delete(20);
+      fail("Expecting null pointer exception");
+    }catch(NullPointerException ignored){
+      fail("Expecting null pointer exception");
+    }
+  }
+
+  @Test(timeout = 4000)
+  public void test2() throws Throwable {
+    AVLTree aVLTree0 = new AVLTree();
     try {
       aVLTree0.insert((-3268));
       aVLTree0.insert(1781);
@@ -25,11 +42,12 @@ public class CustomTestAVLTree {
       aVLTree0.getBalance(aVLTree_Node0);
       fail("Null Pointer Exception Expected");
     }catch(NullPointerException ignored){
+      fail("Expecting null pointer exception");
     }
   }
 
   @Test(timeout = 4000)
-  public void test2() throws Throwable {
+  public void test3() throws Throwable {
     AVLTree aVLTree0 = new AVLTree();
     aVLTree0.insert(11);
     aVLTree0.insert(52);
@@ -41,6 +59,7 @@ public class CustomTestAVLTree {
       aVLTree0.delete(83);
       fail("Expected Null Pointer Exception");
     }catch(NullPointerException ignored){
+      fail("Expecting null pointer exception");
     }
   }
 }
