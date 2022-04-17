@@ -15,7 +15,7 @@ public class CustomTestAVLTree {
     try {
       aVLTree0.delete(20);
       fail("Expecting null pointer exception");
-    }catch(NullPointerException ignored){
+    }catch(Exception ignored){
       fail("Expecting null pointer exception");
     }
   }
@@ -41,7 +41,7 @@ public class CustomTestAVLTree {
       aVLTree0.insert(381);
       aVLTree0.getBalance(aVLTree_Node0);
       fail("Null Pointer Exception Expected");
-    }catch(NullPointerException ignored){
+    }catch(Exception ignored){
       fail("Expecting null pointer exception");
     }
   }
@@ -58,7 +58,7 @@ public class CustomTestAVLTree {
       aVLTree0.delete(25);
       aVLTree0.delete(83);
       fail("Expected Null Pointer Exception");
-    }catch(NullPointerException ignored){
+    }catch(Exception ignored){
       fail("Expecting null pointer exception");
     }
   }
