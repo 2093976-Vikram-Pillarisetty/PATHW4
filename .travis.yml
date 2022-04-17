@@ -8,6 +8,7 @@ jdk:
 sudo: false
 
 script:
+  - mvn test
   - mvn clean
   - mvn evosuite:generate
   - mvn evosuite:export
