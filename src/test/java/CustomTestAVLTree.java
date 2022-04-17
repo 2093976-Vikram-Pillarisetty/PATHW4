@@ -2,8 +2,8 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class CustomTestAVLTree {
-  @Test(timeout = 4000)
-  public void test1() throws Throwable {
+  @Test
+  void test1() throws Throwable {
     try {
     AVLTree avltree1 = new AVLTree();
     AVLTree.Node node2 = avltree1.find(6);
@@ -19,8 +19,8 @@ public class CustomTestAVLTree {
     }
   }
 
-  @Test(timeout = 4000)
-  public void test2() throws Throwable {
+  @Test
+  void test2() throws Throwable {
     try {
     AVLTree avltree1 = new AVLTree();
       avltree1.insert((-3268));
@@ -45,20 +45,25 @@ public class CustomTestAVLTree {
     }
   }
 
-  @Test(timeout = 4000)
-  public void test3() throws Throwable {
+  @Test
+  void test3() throws Throwable {
     try {
     AVLTree avltree3 = new AVLTree();
     avltree3.insert(11);
     avltree3.insert(52);
     avltree3.insert(25);
     avltree3.insert(83);
-      avltree3.delete(52);
-      avltree3.delete(25);
-      avltree3.delete(83);
+    avltree3.delete(52);
+    avltree3.delete(25);
+    avltree3.delete(83);
       fail("Expected Null Pointer Exception");
     }catch(Exception ignored){
       fail("Expecting null pointer exception");
     }
+  }
+
+  @Test
+  void test4(){
+    fail("fail");
   }
 }
