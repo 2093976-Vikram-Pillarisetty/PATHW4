@@ -12,7 +12,6 @@ script:
   - mvn evosuite:generate
   - mvn evosuite:export
   - mvn test
-  - mvn evosuite:info
   - "mvn cobertura:cobertura"
   - bash <(curl -s https://codecov.io/bash)
 
