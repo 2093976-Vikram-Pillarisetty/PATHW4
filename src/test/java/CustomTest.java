@@ -16,9 +16,8 @@ public class CustomTest {
 
     try {
       aVLTree0.delete(10);
-      fail("Expecting null pointer exception");
     }catch(NullPointerException ignored){
-
+      fail("Expecting null pointer exception");
     }
   }
 
@@ -58,9 +57,8 @@ public class CustomTest {
       aVLTree0.delete(50);
       aVLTree0.delete(22);
       aVLTree0.delete(80);
-      fail("Null pointer exception");
     }catch(NullPointerException ignored){
-
+      fail("Null pointer exception");
     }
   }
 }
