@@ -34,8 +34,7 @@
                             <name>listener</name>
                             <value>org.evosuite.runtime.InitializingListener</value>
                         </property>
-                    </properties>
-                    <testFailureIgnore>true</testFailureIgnore>
+                         </properties>
                 </configuration>
             </plugin>
 
